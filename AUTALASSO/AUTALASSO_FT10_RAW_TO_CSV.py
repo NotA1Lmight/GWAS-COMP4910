@@ -1,6 +1,6 @@
 import pandas as pd
 
-data = pd.read_csv("C:\Projects\PycharmProjects\GWAS\PLink\p1.raw", sep=' ', header='infer', engine = 'python',iterator=True)
+data = pd.read_csv("Path/to/your/own/addresss/p1.raw", sep=' ', header='infer', engine = 'python',iterator=True)
 
 loop = True
 chunkSize = 100
@@ -25,7 +25,7 @@ e=data.iloc[:3,:3]
 print(e)
 
 print('Get the  phenotypes FT10')
-first_column = pd.read_csv('C:\Projects\PycharmProjects\GWAS\PLink\phenotypes.pheno', header='infer', usecols=[30], sep=' ')
+first_column = pd.read_csv('Path/to/your/own/addresss/phenotypes.pheno', header='infer', usecols=[30], sep=' ')
 
 print(first_column)
 
@@ -39,4 +39,4 @@ data = data.dropna(subset=['FT10'])#Delete the line containing Nan
 g=data.iloc[:5,:5]
 print(g)
 print('Write raw file')
-data.to_csv('C:\Projects\PycharmProjects\GWAS\PLink\_p1.csv', sep=',', header=None, index=None)
+data.to_csv('Path/to/your/own/addresss/_p1.csv', sep=',', header=None, index=None)
